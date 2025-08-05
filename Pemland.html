@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pemland Communications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="Pemland.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="Pemland.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Pemland Communications Accessories</h1>
+    <p>Expert Repair & Accessories – Kitale Town</p>
+  </header>
+
+  <!-- Slideshow Section -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Welcome to Pemland</div>
+      <div class="swiper-slide">Phone & Tablet Repairs</div>
+      <div class="swiper-slide">Genuine Accessories</div>
+      <div class="swiper-slide">Fast & Reliable Service</div>
+      <div class="swiper-slide">Contact Us Today!</div>
+      <div class="swiper-slide">Visit Us in Kitale</div>
+      <div class="swiper-slide">Quality You Can Trust</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <section class="hero">
+    <h2>We Repair & Sell Accessories for:</h2>
+    <div class="cards">
+      <div class="card" onclick="showList('phone-list')">
+        <img src="https://img.icons8.com/color/96/000000/smartphone-tablet.png" alt="Phone" />
+        <p>Phone</p>
+      </div>
+      <div class="card" onclick="showList('tablet-list')">
+        <img src="https://img.icons8.com/color/96/000000/ipad.png" alt="Tablet" />
+        <p>Tablet</p>
+      </div> 
+    </div>
+  </section>
+
+  <!-- Phone Repair List -->
+  <div id="phone-list" class="repair-list">
+    <h4><i class="fas fa-mobile-alt"></i> Phone Repair Price List:</h4>
+    <div class="search-box">
+      <input type="text" id="phoneSearch" onkeyup="filterList('phoneSearch','phone-list')" placeholder="Search phone repairs...">
+    </div>
+    <ul>
+      <li><strong>SAMSUNG Galaxy Z Fold 7 Screen</strong> – Ksh 7,500.00 <button onclick="bookRepair('SAMSUNG Galaxy Z Fold 7 Screen')">Book Now</button></li>
+      <li><strong>Samsung Galaxy Z Flip FE Screen</strong> – Ksh 7,500.00 <button onclick="bookRepair('Samsung Galaxy Z Flip FE Screen')">Book Now</button></li>
+    </ul>
+  </div>
+
+  <!-- Tablet Repair List -->
+  <div id="tablet-list" class="repair-list">
+    <h4><i class="fas fa-tablet-alt"></i> Tablet Repair Price List:</h4>
+    <div class="search-box">
+      <input type="text" id="tabletSearch" onkeyup="filterList('tabletSearch','tablet-list')" placeholder="Search tablet repairs...">
+    </div>
+    <ul>
+      <li><strong>Samsung Galaxy Tab S9 Screen</strong> – Ksh 8,000.00 <button onclick="bookRepair('Samsung Galaxy Tab S9 Screen')">Book Now</button></li>
+      <li><strong>iPad 10th Gen Screen</strong> – Ksh 9,500.00 <button onclick="bookRepair('iPad 10th Gen Screen')">Book Now</button></li>
+    </ul>
+  </div>
+
+  <!-- Trust Section -->
+  <section class="trust">
+    <h3>Why You Can Trust Pemland Communications</h3>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Quality service</li>
+      <li><i class="fas fa-check-circle"></i> Free diagnosis</li>
+      <li><i class="fas fa-check-circle"></i> Quick fix — wait a few minutes</li>
+      <li><i class="fas fa-check-circle"></i> Genuine spares</li>
+      <li><i class="fas fa-check-circle"></i> Countrywide services (Send, fix & return)</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Contact: Jeffery Waweru — 0758 585 053 | Kitale Town</p>
+  </footer>
+</body>
+</html>
